@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--进度条-->
+    <progress max="100" value="0" id="pro"></progress><span id="getNum">0%</span>
+    <meter max="100" min="0" high="80" low="30" optimum="95" value="98"></meter>
+    <script>
+        var pro = document.getElementById('pro');
+        var num = 0;
+        var getNum = document.getElementById('getNum');
+        function showNum(){
+            num++;
+            if(num>=100)
+            num = 0;
+            pro.value = num;
+            getNum.innerHTML = num + '%';
+        }
+        setInterval("showNum()",100);
+    </script>
+    <!--加减计算-->
+    <form oninput="res.value = parseInt(n1.value) + parseInt(n2.value)">
+        <input type="number"name="n1"/> +
+        <input type="number"name="n2"/> =
+        <output name="res"></output>
+    </form>
+    <!--选择你喜欢的颜色-->
+    <p>请选择你喜欢的颜色：<input type="text" list="color"/></p>
+    <datalist id="color">
+        <option value="红色"></option>
+        <option value="黄色"></option>
+        <option value="蓝色"></option>
+        <option value="绿色"></option>
+    </datalist>
+</body>
+</html>
