@@ -24,18 +24,15 @@
         p span{
             color: cornflowerblue;
         }
-        .f~*{
+        .f+*{
             font-size: 70px;
-        }
-        p,b,span{
-            font-size: 50px;
         }
     </style>
 </head>
 <body>
     <p style="font-size: 32px;" class="f">今天天气很好,<span>小明<span>小红</span></span>哭了</p><!--对于颜色来说行内的优先级最高-->
     <p style="font-size: 32px;" id="blue">今天天气很好小明哭了</p><!--id选择器，是特定的东西有特定的颜色，方式：#+id名称,不可重复使用-->
-    <b class="f">测试文字</b><!--class可以重复使用-->
+    <b >测试文字</b><!--class可以重复使用-->
     <span class="f">测试文字</span>
 </body>
 </html>
