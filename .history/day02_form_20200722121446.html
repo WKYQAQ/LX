@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+</head>
+<body>
+    <h2>欢迎来到注册页面</h2>
+    <form action="register.php" method="POST" enctype="multipart/form-data">
+    <!--1.考试可能会考2.post改成get，内容会直接显示，不太好3.目前不知道地址的话用action中#代替-->
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="username" placeholder="请输入用户名"/></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password" placeholder="请输入密码"/></td>
+                </td>
+            </tr>
+            <tr>
+                <td>姓别：</td>
+                <td>
+                    <input type="radio" name="sex" value="man" checked="checked"/> 男
+                    <!--也可以checked id="man"/><label for="man">男</label>-->
+                    <input type="radio" name="sex" value="male"/> 女
+                </td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td>
+                    <input type="checkbox" name="like" value="1"/> 篮球
+                    <input type="checkbox" name="like" value="2"/> 足球
+                    <input type="checkbox" name="like" value="3"/> 排球
+                    <input type="checkbox" name="like" value="4"/> 乒乓球
+                </td>
+            </tr>
+            <tr>
+                <td>籍贯：</td>
+                <td>
+                    <select name="">
+                    <!--<select name="" multiple>多选-->
+                        <option value="shanxi">山西</option>
+                        <option value="jiangsu">江苏</option>
+                        <option value="shanghai">上海</option>
+                        <option value="beijing">北京</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>头像上传：</td>
+                <td><input type="file" name="file"/></td>
+            </tr>
+            <tr>
+                <td>个人简介：</td>
+                <td>
+                    <textarea cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <input type="hidden" name="token" value="123456"/>
+            <!--         -->
+            <tr>
+                <td></td>
+                <td>
+                    <input type="reset" value="重置"/>
+                    <input type="submit" value="注册"/></td>
+                    <!--button是普通按钮可以绑定事件-->
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

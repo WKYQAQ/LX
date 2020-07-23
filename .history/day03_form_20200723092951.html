@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<sp>
+    <progress max="100" value="50" id="pro"></progress><span id="getNum">0%</span>
+    <script>
+        var pro = document.getElementById('pro');
+        var num = 0;
+        var getNum = document.getElementById('getNum');
+        function showNum(){
+            num++;
+            pro.value = num;
+            getNum.innerHTML = num + '%';
+        }
+        setInterval("showNum",1000);
+    </script>
+</body>
+</html>
